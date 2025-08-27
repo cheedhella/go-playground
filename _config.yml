@@ -1,0 +1,35 @@
+title: "My Tech Notes"
+description: "A collection of notes on programming, tools, and technology."
+author: "Your Name"
+
+# Theme (GitHub Pages supports a few built-in themes)
+theme: jekyll-theme-cayman
+# Other built-in themes: minima, slate, hacker, modernist, tactile, time-machine
+
+# URL settings (optional, helps when using a custom domain)
+url: "https://yourusername.github.io"
+baseurl: "/your-repo-name"   # leave blank "" if deploying at root
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Navigation (optional – if your theme supports it)
+nav:
+  - title: "Home"
+    url: /
+  - title: "Notes"
+    url: /notes/
+  - title: "About"
+    url: /about/
+
+# Exclude files from the site build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Plugins (GitHub Pages whitelisted)
+plugins:
+  - jekyll-feed   # generates RSS feed
+  - jekyll-seo-tag  # improves SEO
