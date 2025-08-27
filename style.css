@@ -1,0 +1,59 @@
+/* Basic navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* show only on small screens */
+}
+
+/* Responsive: small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    display: none; /* hidden by default */
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when active */
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
