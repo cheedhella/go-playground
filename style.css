@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-}
-
 #menuToggle {
   position: fixed;
   top: 20px;
@@ -11,12 +5,18 @@ body {
   z-index: 2;
 }
 
+/* Hide the checkbox */
 #menuToggle input {
   display: none;
 }
 
-/* Hamburger lines */
-#menuToggle span {
+/* Hamburger label */
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger span {
   display: block;
   width: 30px;
   height: 4px;
@@ -55,13 +55,13 @@ body {
 }
 
 /* Animate burger into "X" */
-#menuToggle input:checked ~ span:nth-child(2) {
+#menuToggle input:checked + .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
-#menuToggle input:checked ~ span:nth-child(3) {
+#menuToggle input:checked + .hamburger span:nth-child(2) {
   opacity: 0;
 }
-#menuToggle input:checked ~ span:nth-child(4) {
+#menuToggle input:checked + .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
